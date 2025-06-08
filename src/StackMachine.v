@@ -483,7 +483,7 @@ Lemma wf_app (p q  : prog)
 Proof.
   induction p as [ | instr p' IHp'].
   - simpl. 
-    replace (label_occurs_once l q) with true by exact Hocc.
+    replace (label_occurs_once l q) with true.
     reflexivity.
   - simpl in Hwf.
     destruct instr;
